@@ -1,0 +1,84 @@
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#slider-block-1, #slider-block-2 {
+    max-width: 500px;
+    margin: auto;
+}
+
+.slider {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.slider img.active {
+    max-width: 100%;
+    
+}
+
+.slider .btn-left, .slider .btn-right {
+    position: absolute;
+    background: #00000073;
+    height: 40px;
+    width: 40px;
+    top: 40%;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.slider .btn-left:hover, .slider .btn-right:hover {
+    background: #0000;
+}
+
+.slider .btn-left {
+    left: 5px;
+}
+
+.slider .btn-right {
+    right: 5px;
+}
+
+@keyframes fideEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sliderTopEffect {
+    from {
+        opacity: 0;
+        top: -100%;
+    }
+    to {
+        opacity: 1;
+        top: 0%;
+    }
+}
+
+@keyframes sliderLeftEffect {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+.slider.effect-fide img.active {
+    animation: sliderLeftEffect 2s linear;
+    position: relative;
+}
+
